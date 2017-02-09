@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="speaking_interval_preference">
+        <item>@string/interval_15_seconds</item>
+        <item>@string/interval_30_seconds</item>
+        <item>@string/interval_1_minute</item>
+        <item>@string/interval_2_minutes</item>
+        <item>@string/interval_5_minutes</item>
+        <item>@string/interval_10_minutes</item>
+    </string-array>
+    <string-array name="speaking_interval_preference_values">
+        <item>0.25</item>
+        <item>0.5</item>
+        <item>1</item>
+        <item>2</item>
+        <item>5</item>
+        <item>10</item>
+    </string-array>
+</resources>

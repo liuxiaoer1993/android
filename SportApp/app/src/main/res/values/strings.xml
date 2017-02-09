@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">SportApp</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="time_caculate">时长</string>
+    <string name="speed">配速（分钟/公里）</string>
+    <string name="calorie">卡路里</string>
+    <string name="mileage">里程</string>
+    <string name="average_speed">速度</string>
+    <string name="steps">步数</string>
+    <string name="height">海拔</string>
+    <string name="setting">设置</string>
+    <string name="body_weight">体重</string>
+    <string name="weight_summary">设置体重，用来计算卡路里</string>
+    <string name="speak_race">播报频率</string>
+    <string name="speak_race_summary">选择播报频率</string>
+    <string name="speak">语音播报</string>
+    <string name="speak_summary">是否开启语音播报功能</string>
+    <string name="speak_type">播报类型</string>
+    <string name="interval_15_seconds">15 秒</string>
+    <string name="interval_30_seconds">30 秒</string>
+    <string name="interval_1_minute">1 分钟</string>
+    <string name="interval_2_minutes">2 分钟</string>
+    <string name="interval_5_minutes">5 分钟</string>
+    <string name="interval_10_minutes">10 分钟</string>
+</resources>
