@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
@@ -16,10 +17,13 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 public class WebActivity extends AppCompatActivity {
+    private static final String TAG = "WebActivity";
 
     private WebView mWebView = null;
 
     private ProgressBar progressBar = null;
+
+    private boolean isPageFinish = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +56,13 @@ public class WebActivity extends AppCompatActivity {
 
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
+            Log.d(TAG,"url:"+url);
             return false;
+        }
+
+        @Override
+        public void onPageFinished(WebView view, String url) {
+            Log.d(TAG,"onPageFinished()");
         }
 
     }
@@ -61,15 +71,18 @@ public class WebActivity extends AppCompatActivity {
 
         @Override
         public void onProgressChanged(WebView view, int newProgress) {
-            if (newProgress == 100) {
-                progressBar.setVisibility(View.GONE);
+            Log.d(TAG,"progress:"+newProgress);
+            if (newProgress >= 100) {
+                if (progressBar.isShown()) {
+                    progressBar.setVisibility(View.GONE);
+                }
+                isPageFinish = true;
             } else {
                 if (!progressBar.isShown()) {
                     progressBar.setVisibility(View.VISIBLE);
                 }
                 progressBar.setProgress(newProgress);
             }
-
         }
     }
 
